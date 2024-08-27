@@ -1,0 +1,15 @@
+<div class="container mt-5">
+    <h2>Update Customer</h2>
+    <form (ngSubmit)="updateCustomer()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="customer.name" name="name" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="customer.email" name="email" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Update Customer</button>
+    </form>
+  </div>
+  

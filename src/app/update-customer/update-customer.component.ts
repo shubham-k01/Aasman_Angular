@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CustomerService } from '../customer.service';
 import { FormsModule } from '@angular/forms';
 import { Customer } from '../models/customer.model';
+import { map } from 'rxjs';
 
 @Component({
   standalone: true,
@@ -12,7 +13,7 @@ import { Customer } from '../models/customer.model';
   styleUrls: ['./update-customer.component.css']
 })
 export class UpdateCustomerComponent implements OnInit {
-  customer: Customer = { name: '', email: '' };
+  customer: Customer = { name: '', email: '',address:'' };
   id: any;
 
   constructor(
@@ -22,13 +23,17 @@ export class UpdateCustomerComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.id = +!this.route.snapshot.paramMap.get("id") | 0;
+    this.id = +this.route.snapshot.params['id'];
+    // this.id = +!this.route.params.pipe(map((p) => p['id']));
+    console.log('Id:',this.id);
     this.customerService.getCustomers().subscribe(customers => {
       this.customer = customers.find(c => c.id === this.id);
     });
   }
 
   updateCustomer(): void {
+    console.log('hi');
+    
     this.customerService.updateCustomer(this.id, this.customer).subscribe(() => {
       this.router.navigate(['/']);
     });

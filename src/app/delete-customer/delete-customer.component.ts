@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CustomerService } from '../customer.service';
 import { CommonModule } from '@angular/common';
+import { Customer } from '../models/customer.model';
 
 @Component({
   standalone:true,
@@ -11,7 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./delete-customer.component.css']
 })
 export class DeleteCustomerComponent implements OnInit {
-  customer: any = { name: '', email: '' };
+  customer: Customer = { name: '', email: '',address:'' };
   id: any;
 
   constructor(
@@ -21,7 +22,7 @@ export class DeleteCustomerComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.id = +!this.route.snapshot.paramMap.get('id');
+    this.id = +this.route.snapshot.params['id'];
     this.customerService.getCustomers().subscribe(customers => {
       this.customer = customers.find(c => c.id === this.id);
     });

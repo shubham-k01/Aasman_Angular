@@ -8,8 +8,8 @@ import { ErrorComponent } from './error/error.component';
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'add', component: AddCustomerComponent },
-    { path: 'update', component: UpdateCustomerComponent },
-    { path: 'delete', component: DeleteCustomerComponent },
+    { path: 'update/:id', component: UpdateCustomerComponent },
+    { path: 'delete/:id', component: DeleteCustomerComponent },
     { path: '**', component: ErrorComponent }
   ];
 

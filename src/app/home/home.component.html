@@ -14,12 +14,13 @@
           <td>{{ customer.id }}</td>
           <td>{{ customer.name }}</td>
           <td>{{ customer.email }}</td>
-          <td>
-            <a [routerLink]="['/update', customer.id]" class="btn btn-primary btn-sm">Update</a>
+          <td >
+            <a [routerLink]="['/update', customer.id]" class="btn btn-primary btn-sm mx-1">Update</a>
             <a [routerLink]="['/delete', customer.id]" class="btn btn-danger btn-sm">Delete</a>
           </td>
         </tr>
       </tbody>
     </table>
+    <a [routerLink]="['/add']" class="btn btn-primary btn-sm">Add Customer</a>
   </div>
   

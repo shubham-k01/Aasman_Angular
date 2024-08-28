@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CustomerService } from '../customer.service';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { AddCustomerComponent } from "../add-customer/add-customer.component";
 
 @Component({
   standalone:true,
   selector: 'app-home',
-  imports:[RouterLink,CommonModule],
+  imports: [RouterLink, CommonModule, AddCustomerComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

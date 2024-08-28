@@ -1,27 +1,37 @@
-# CustomerCrud
+# Customer Management System 🗃️
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.1.
+## Members 👥
 
-## Development server
+- Shubham Kurunkar
+- Aditya Potdar
+- Meet Patel
+- Vandesh Sawant
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Project Overview 🚀
 
-## Code scaffolding
+The Customer Management System is designed to manage customer information efficiently. The system allows users to perform the following operations:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Create**: Add new customers to the database. 🆕
+- **Read**: View a list of customers and their details. 📋
+- **Update**: Modify existing customer information. ✏️
+- **Delete**: Remove customers from the database. ❌
 
-## Build
+The application is built using Angular for a dynamic user interface, Dotnet Core for a robust backend API, and SQL Server for reliable data storage.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Technologies Used 🛠️
 
-## Running unit tests
+- **Frontend**: Angular
+- **Backend**: Dotnet Core (ASP.NET Core)
+- **Database**: SQL Server
+- **Development Tools**: Node.js, npm, Visual Studio, SQL Server Management Studio
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Prerequisites ⚙️
 
-## Running end-to-end tests
+Before setting up the project, ensure you have the following installed:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- [Node.js](https://nodejs.org/) (for Angular CLI) 🌐
+- [.NET Core SDK](https://dotnet.microsoft.com/download) (for backend development) 💻
+- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) (for the database) 🗄️
+- [Visual Studio](https://visualstudio.microsoft.com/) or [Visual Studio Code](https://code.visualstudio.com/) (for code editing) 🔧
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
